@@ -4,3 +4,4 @@
 - [x] Add dist to docker
 - [ ] jest
 - [ ] hooks
+- [ ] github ci
