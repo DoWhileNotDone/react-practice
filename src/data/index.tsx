@@ -1,8 +1,7 @@
 
-import {
+import type {
     thing as thingType,
-  } from 'src/types';
-
+} from 'types';
   
 export const things: Array<thingType> = [
     {id: 1, name: 'thing 1', length: 5},

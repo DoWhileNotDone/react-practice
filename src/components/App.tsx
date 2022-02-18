@@ -4,8 +4,9 @@ import { Parent } from './Parent';
 import { 
   ThingsProvider,
   useThingsContext 
-} from 'src/context'
-import { things } from 'src/data';
+} from 'providers';
+
+import { things } from 'data';
 
 const App = () => {
 

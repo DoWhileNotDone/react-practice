@@ -1,17 +1,11 @@
 import React from 'react';
-import { useThingsContext } from './App';
-import { thing as thingType} from './typeDefs';
-type ChildProps = {
-  /** Iteration Key */
- key: number;
- /** Iteration Index */
- index: number;
-}  
+import { useThingsContext } from 'providers';
+import type { thing as thingType, ChildProps} from 'types';
 
 const Child = ({ index }: ChildProps) => {
 
   const context = useThingsContext();
-  const thing: thingType|undefined = context.things.find(thing => thing.id === index);
+  const thing: thingType|undefined = context.things.find((thing: thingType) => thing.id === index);
   return (
       <div>
           { `Child - ${thing?.name ?? 'not found'}` } 

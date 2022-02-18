@@ -1,9 +1,5 @@
 import React from 'react';
-
-type ParentProps = {
-   /** Parent Component Props Children */
-  children: React.ReactNode;
-}  
+import type { ParentProps } from 'types'
 
 const Parent = ({ children }: ParentProps ) => {
   return (

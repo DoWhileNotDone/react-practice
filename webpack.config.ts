@@ -1,6 +1,7 @@
 import path from "path";
 import { Configuration } from "webpack";
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 
 const config: Configuration = {
   mode: 'development',
@@ -23,6 +24,7 @@ const config: Configuration = {
     ],
   },
   resolve: {
+    plugins: [new TsconfigPathsPlugin()],
     extensions: [".tsx", ".ts", ".js"],
   },
   output: {

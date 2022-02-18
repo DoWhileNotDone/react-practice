@@ -11,4 +11,16 @@ export type thingsContext = {
   toggleContext: toggleContext;
   /** Array of Things */
   things: Array<thing>;
-}  
+};
+
+export type ParentProps = {
+  /** Parent Component Props Children */
+ children: React.ReactNode;
+};
+
+export type ChildProps = {
+  /** Iteration Key */
+ key: number;
+ /** Iteration Index */
+ index: number;
+};
