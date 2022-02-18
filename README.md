@@ -4,7 +4,7 @@
 - [x] Add dist to docker
 - [ ] jest
 - [ ] hooks
-   - [ x ] context
+   - [x] context
    - [ ] reducers
    - [ ] actions
    - [ ] effect   
