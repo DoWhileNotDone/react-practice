@@ -5,7 +5,6 @@ import {
   ThingsProvider,
   useThingsContext 
 } from 'providers';
-
 import { things } from 'data';
 
 const App = () => {

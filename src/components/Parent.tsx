@@ -1,7 +1,7 @@
 import React from 'react';
-import type { ParentProps } from 'types'
+import type { ChildrenProps } from 'types'
 
-const Parent = ({ children }: ParentProps ) => {
+const Parent = ({ children }: ChildrenProps ) => {
   return (
       <div>
          { children }

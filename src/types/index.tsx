@@ -6,14 +6,14 @@ export type thing = {
 
 export type toggleContext = () => void;
 
-export type thingsContext = {
+export type thingsState = {
   /** Toggle Context Function */
   toggleContext: toggleContext;
   /** Array of Things */
   things: Array<thing>;
 };
 
-export type ParentProps = {
+export type ChildrenProps = {
   /** Parent Component Props Children */
  children: React.ReactNode;
 };
@@ -24,3 +24,8 @@ export type ChildProps = {
  /** Iteration Index */
  index: number;
 };
+
+export type action = {
+  type: string;
+  payload: thing;
+}
