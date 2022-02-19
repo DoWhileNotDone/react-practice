@@ -4,8 +4,7 @@ import { Parent } from './Parent';
 import { 
   ThingsProvider,
 } from 'providers';
-
-
+ 
 const App = () => {
 
   return (

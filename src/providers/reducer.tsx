@@ -1,14 +1,11 @@
-
-import { action_types } from './types';
+import { action_types } from 'definitions';
 
 import type {
     action as actionType,
     thingsState,
-} from 'types';
+} from 'definitions';
 
-import { state as initialState } from './initialstate'
-
-export const appReducer = (state: thingsState = initialState, { type, payload}: actionType):thingsState  => {
+export const appReducer = (state: thingsState, { type, payload }: actionType): thingsState  => {
 
     if (!type) {
       throw new Error('ThingsProvider action type is undefined')
@@ -21,6 +18,6 @@ export const appReducer = (state: thingsState = initialState, { type, payload}: 
             things: [...state.things, payload],
         };
       default:
-        throw new Error(`No matching action found for ${type}`);
+        return state;
     }
 };

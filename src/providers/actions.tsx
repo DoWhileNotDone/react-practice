@@ -1,6 +1,6 @@
 import { Dispatch, useCallback } from 'react';
-import { action_types } from './types';
-import type { thingsState } from 'types'
+import { action_types } from 'definitions';
+import type { thingsState } from 'definitions'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const useActions = (state: thingsState, dispatch: Dispatch<any>) => {

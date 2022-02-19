@@ -1,11 +1,11 @@
 import React from 'react';
 import { useThingsContext } from 'providers';
-import type { thing as thingType, ChildProps} from 'types';
+import type { ThingInterface, ChildComponentProps} from 'definitions';
 
-const Child = ({ index }: ChildProps) => {
+const Child = ({ index }: ChildComponentProps) => {
 
   const { state: { things }} = useThingsContext();
-  const thing: thingType|undefined = things.find((thing: thingType) => thing.id === index);
+  const thing: ThingInterface|undefined = things.find((thing: ThingInterface) => thing.id === index);
   return (
       <div>
           { `Child - ${thing?.name ?? 'not found'}` } 

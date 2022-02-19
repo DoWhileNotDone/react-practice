@@ -1,7 +1,7 @@
 import React from 'react';
-import type { ChildrenProps } from 'types'
+import type { ComponentPropsInterface } from 'definitions'
 
-const Parent = ({ children }: ChildrenProps ) => {
+const Parent = ({ children }: ComponentPropsInterface ) => {
   return (
       <div>
          { children }

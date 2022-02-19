@@ -1,6 +1,6 @@
 import type {
     thingsState,
-} from 'types';
+} from 'definitions';
 
 export const state: thingsState = {
     things: [], // set a default value
