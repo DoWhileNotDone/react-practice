@@ -1,5 +1,5 @@
-import { useReducer } from 'react';
-import { ADD_ACTION } from 'consts';
+
+import { action_types } from './types';
 
 import type {
     action as actionType,
@@ -8,19 +8,19 @@ import type {
 
 import { state as initialState } from './initialstate'
 
-export const appReducer = (state:thingsState = initialState, action: actionType):thingsState  => {
-    switch (action.type) {
-      case ADD_ACTION:
+export const appReducer = (state: thingsState = initialState, { type, payload}: actionType):thingsState  => {
+
+    if (!type) {
+      throw new Error('ThingsProvider action type is undefined')
+    }
+
+    switch (type) {
+      case action_types.ADD_ACTION:
         return {
             ...state,
-            things: [...state.things, action.payload],
+            things: [...state.things, payload],
         };
       default:
-        throw new Error();
+        throw new Error(`No matching action found for ${type}`);
     }
-  }
-
-export const useThingReducer = () => {
-    const [state, dispatch] = useReducer(appReducer, initialState);
-    return [state, dispatch];
 };

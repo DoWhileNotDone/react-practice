@@ -1,12 +1,21 @@
-import { ADD_ACTION } from 'consts';
-import type {
-    thing,
-    action,
-} from 'types';
+import { Dispatch, useCallback } from 'react';
+import { action_types } from './types';
+import type { thingsState } from 'types'
 
-export const addAction = (thing: thing): action => { 
-    return { 
-        type: ADD_ACTION, 
-        payload: thing
-    }
-};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const useActions = (state: thingsState, dispatch: Dispatch<any>) => {
+
+    const addAction = useCallback(
+        payload => {
+            dispatch({
+                type: action_types.ADD_ACTION,
+                payload
+            });
+        },
+        [dispatch]
+    );
+
+    return {
+        addAction,
+    };
+}    
