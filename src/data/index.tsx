@@ -1,4 +1,3 @@
-
 import type { ThingInterface } from 'definitions';
   
 export const things: Array<ThingInterface> = [

@@ -1,11 +1,11 @@
-import { action_types } from 'definitions';
+import { action_types } from './actions';
 
 import type {
-    action as actionType,
+    action,
     thingsState,
 } from 'definitions';
 
-export const appReducer = (state: thingsState, { type, payload }: actionType): thingsState  => {
+export const appReducer = (state: thingsState, { type, payload }: action): thingsState  => {
 
     if (!type) {
       throw new Error('ThingsProvider action type is undefined')

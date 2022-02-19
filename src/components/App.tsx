@@ -1,9 +1,7 @@
 import React from 'react';
 import { Child } from './Child';
 import { Parent } from './Parent';
-import { 
-  ThingsProvider,
-} from 'providers';
+import { ThingsProvider } from 'providers';
  
 const App = () => {
 
