@@ -16,8 +16,8 @@ export type thingsState = {
 export type ChildComponentProps = {
     /** Iteration Key */
     key: number;
-    /** Iteration Index */
-    index: number;
+    /** Item Id */
+    id: number;
 };
 
 export type action = {

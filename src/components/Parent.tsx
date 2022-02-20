@@ -1,10 +1,17 @@
 import React from 'react';
-import type { ComponentPropsInterface } from 'definitions'
+import { Child } from './Child';
+import type { ThingInterface } from 'definitions';
+import { useThingsContext } from 'providers';
 
-const Parent = ({ children }: ComponentPropsInterface ) => {
+const Parent = () => {
+  const { state: { things }} = useThingsContext();
+  //Deliberately not passing the full thing 
+  // so it can be retrieved from context in child
   return (
       <div>
-         { children }
+          {things.map((thing: ThingInterface) => {
+            return <Child key={thing.id} id={thing.id}></Child>
+          })}
       </div>
   );
 };

@@ -1,4 +1,4 @@
 export {
     ThingsProvider,
     useThingsContext,
-} from './context';
+} from './ThingProvider/context';
