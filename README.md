@@ -1,7 +1,7 @@
 == TODO ==
 
 - [x] Convert to typescript
-  - [ ] tidy up type declations
+  - [ ] tidy up type declarations
   - [x] aim to remove any 
 - [x] Add dist to docker
 - [ ] jest
@@ -14,4 +14,6 @@
    - [ ] effect   
 - [ ] github ci
 - [ ] prettier
-- [ ] material ui / themes
+- [x] material ui
+   - [ ] themes
+   - [ ] improve   
